@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Task',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', auto_created=True, serialize=False, primary_key=True)),
+                ('id', models.AutoField(max_length=32, primary_key=True, editable=False, serialize=False)),
                 ('name', models.CharField(editable=False, max_length=100)),
                 ('func', models.CharField(max_length=256)),
                 ('hook', models.CharField(null=True, max_length=256)),
